@@ -9,22 +9,20 @@ package eva2_1;
  * @author burci
  */
 public class Eva2_1 {
-
-
-    public static void main(String[] args) {
-        // Crear el primer objeto
+public static void main(String[] args) {
+        // Se crea la primera instancia (referencia principal)
         Ejemplo miObj = new Ejemplo();
         miObj.valor = 100;
 
-        // Crear el segundo objeto anidado
+        // Se crea una segunda instancia vinculada a la primera
         miObj.otro = new Ejemplo();
         miObj.otro.valor = 200;
 
-        // Crear el tercer objeto anidado
+        // Se crea una tercera instancia vinculada a la segunda
         miObj.otro.otro = new Ejemplo();
         miObj.otro.otro.valor = 300;
 
-        // Impresión de resultados
+        // Impresión de los valores para verificar la cadena de referencias
         System.out.println("MiObj = " + miObj.valor);
         System.out.println("MiObj.otro = " + miObj.otro.valor);
         System.out.println("MiObj.otro.otro = " + miObj.otro.otro.valor);
@@ -33,7 +31,7 @@ public class Eva2_1 {
 
 class Ejemplo {
     int valor;
-    Ejemplo otro;
+    Ejemplo otro; // Autorreferencia: permite que un objeto apunte a otro del mismo tipo
 }
     
 
